@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.home_title),
+        title: Text(AppLocalizations.of(context)!.homeTitle),
       ),
       body: charList.isNotEmpty
           ? ListView.builder(
