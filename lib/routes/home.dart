@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:rpg_sheet/routes/character_creator.dart';
+import 'package:rpg_sheet/widgets/empty_list.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,12 +19,16 @@ class Home extends StatelessWidget {
                 return CharacterListItem(charList[index]);
               },
             )
-          : const Center(
-              child: Text('Nothing to see here'),
-            ),
+          : const EmptyListView(),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute<CharacterCreator>(
+            builder: (context) {
+              return const CharacterCreator();
+            },
+          ));
+        },
       ),
     );
   }
