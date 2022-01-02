@@ -20,6 +20,10 @@ class Home extends StatelessWidget {
           : const Center(
               child: Text('Nothing to see here'),
             ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
+      ),
     );
   }
 }
